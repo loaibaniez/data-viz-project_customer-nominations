@@ -13,7 +13,7 @@ A Power BI dashboard built to help a friend manage and monitor a **Voice of Cust
 
 ## 🔗 Link
 
-- 📌 [Live Dashboard](https://app.powerbi.com/view?r=eyJrIjoiY2MwZWMxY2UtYmNhMy00ZGQ1LTk3YjUtYzZiNDViNWRiMTNhIiwidCI6IjEyYmMwNzYyLWZiOWEtNDFkNy1iODMyLWIzYWQ1OGE4YzRmOSIsImMiOjR9)
+- 📌 [Live Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZTM4ZWZjZTItNzZmYS00YmU3LWE5MTktNmJiY2I3NDRlNDgxIiwidCI6IjEyYmMwNzYyLWZiOWEtNDFkNy1iODMyLWIzYWQ1OGE4YzRmOSIsImMiOjR9)
 
 ---
 
