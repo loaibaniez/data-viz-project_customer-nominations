@@ -13,7 +13,7 @@ A Power BI dashboard built to simulate a **Customer Nomination Program pipeline*
 
 ## 🔗 Link
 
-- 📌 [Live Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZTM4ZWZjZTItNzZmYS00YmU3LWE5MTktNmJiY2I3NDRlNDgxIiwidCI6IjEyYmMwNzYyLWZiOWEtNDFkNy1iODMyLWIzYWQ1OGE4YzRmOSIsImMiOjR9)
+- 📌 [Live Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNzIxN2ZkYjUtNTAxMi00ODA3LTg5MzAtN2ZhZWJhNmQ5YTQ0IiwidCI6IjEyYmMwNzYyLWZiOWEtNDFkNy1iODMyLWIzYWQ1OGE4YzRmOSIsImMiOjR9)
 
 ---
 
