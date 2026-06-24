@@ -287,5 +287,5 @@ The visual language was deliberately aligned with Microsoft's Fluent Design Syst
 
 ---
 
-*Data: synthetically generated to simulate a Customer Nomination Program's pipeline. Built to practice DAX-generated SVG, UDF patterns, and semantic model documentation.*  
+*Data: synthetically generated to simulate a Customer Nomination Program's pipeline. Built to practice DAX-generated SVG, UDF patterns, and teach my semantic model documentation method.*  
 *Author: Loana Ibañez*
