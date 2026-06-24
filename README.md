@@ -1,9 +1,9 @@
 # data-viz-project_customer-nominations
 Pipeline tracking, DAX-generated SVG, and UDF patterns — built on fictional data, real techniques.
 
-# 📋 Voice of Customer — Nominations Pipeline Dashboard
+# 📋 Customer Nomination Pipeline Dashboard
 
-A Power BI dashboard built to help a friend manage and monitor a **Voice of Customer nominations pipeline** — tracking nominations from initial review through to live success stories. Built with advanced DAX-generated SVG visuals, a UDF-based design system, and a fully documented semantic model. Every technical choice has a design rationale. Every design choice has a business rationale.
+A Power BI dashboard built to simulate a **Customer Nomination Program pipeline** — modeled after real Microsoft programs that track customer nominations from initial review through to live success stories. Built with advanced DAX-generated SVG visuals, a UDF-based design system, and a fully documented semantic model. Every technical choice has a design rationale. Every design choice has a business rationale.
 
 > **Key question this dashboard answers:** *Where are nominations getting stuck, and what needs to happen next?*
 
@@ -19,7 +19,7 @@ A Power BI dashboard built to help a friend manage and monitor a **Voice of Cust
 
 ## 💡 Why I Built This
 
-A friend needed help building a Power BI dashboard that would make an impact. She came to me with inspiration photos. Looking at them, I saw that the visual impact she was after was achievable with advanced data visualization techniques — not just better charts.
+A friend needed help building a Power BI dashboard that would make a visual impact. She came to me with inspiration photos. Looking at them, I saw that the look & feel she was after was achievable with advanced data visualization techniques — not just better charts.
 
 I taught her how to use SVGs in slicers with different states, and took the opportunity to apply UDFs — a recent Power BI release at the time — to build a design system inside the tool itself. One color token change propagating across every visual is a different category of development than hardcoding hex values per measure.
 
@@ -90,7 +90,7 @@ The bar chart switches between Segment and Solution Area via a field parameter. 
 
 ## 🗂️ Project Overview
 
-A fictional Voice of Customer nominations pipeline for a Microsoft program. The dashboard allows a program coordinator to monitor 100 nominations across 5 active pipeline stages, filter by status, and identify the top segments and solution areas.
+A fictional Customer Nominations Pipeline for a Microsoft program. The dashboard allows the account manager, the program coordinator, and sales executives to monitor 100 nominations across 5 active pipeline stages, filter by status, and identify the top segments and solution areas.
 
 The data was generated synthetically to simulate a realistic distribution across segments, countries, and solution areas.
 
@@ -98,6 +98,14 @@ The data was generated synthetically to simulate a realistic distribution across
 
 ## 👤 Who Is This For?
 
+
+
+---
+
+## 🔄 Process
+
+### Step 1 — Define the audience
+Built 3 user personas to understand the Customer Nomination Program, context, goals, and level of expertise of their people. 
 This dashboard serves three distinct users, each with a different context and urgency:
 
 **Account Manager / Field Seller**
@@ -110,13 +118,7 @@ Oversees the full pipeline health. Needs aggregated views to detect bottlenecks 
 Arrives at Active Nominations before a client meeting looking for a specific success story to reference. Filters by LIVE status and scans the table for the right company, segment, or solution area. Needs the filter to be one click away — not hidden behind a panel.
 
 > Three users. Three contexts. One dashboard — with a different experience designed for each.
-
----
-
-## 🔄 Process
-
-### Step 1 — Define the audience
-Built a user persona to understand the VoC Program Coordinator's context, goals, and level of expertise. This informed every design and technical decision that followed.
+> This informed every design and technical decision that followed.
 
 ### Step 2 — Define the needs
 Mapped must-have views including pipeline health monitoring, nomination filtering by status, segment and solution area breakdown, and a detailed nominations table with status visibility.
@@ -131,7 +133,7 @@ UX was fully defined before opening Power BI. Started with Figma to map the layo
 The UX structure and layout direction were validated informally before building — confirming that the navigation flow and information hierarchy met the user's needs.
 
 ### Step 6 — Create the framework
-ETL process and data modeling were performed in Power BI. Star schema with `FT_VOC` as the fact table and four dimensions generated dynamically via Power Query `Table.Group`. DAX calculations built in layers: UDF helpers first, then SVG/HTML composite measures that call them.
+ETL process and data modeling were performed in Power BI. Star schema with `FT_CNP` as the fact table and four dimensions generated dynamically via Power Query `Table.Group`. DAX calculations built in layers: UDF helpers first, then SVG/HTML composite measures that call them.
 
 ### Step 7 — Plan the UI
 UI was finalized in Figma: the three-token color system per status was formalized as the design system, the semantic icon system was defined with two options explored per stage, and all visual decisions were documented before building. Microsoft Fluent Design System tokens guided every color choice.
@@ -190,14 +192,14 @@ The report was published and is available as a live dashboard.
 
 ### Star Schema
 
-The data model follows a **relational star schema** with `FT_VOC` as the central fact table and four dimension tables connected via single-direction relationships. All dimensions are generated dynamically from the fact table via Power Query `Table.Group` — no separate data source needed.
+The data model follows a **relational star schema** with `FT_CNP` as the central fact table and four dimension tables connected via single-direction relationships. All dimensions are generated dynamically from the fact table via Power Query `Table.Group` — no separate data source needed.
 
 The Model view is organized in four deliberate columns to keep the diagram readable at a glance:
 
 - **Column 1** — measure and visualization tables (`⚙️ Measures`, `⭐ Visualization`)
 - **Column 2** — parameter and filter tables (`Parameter`, `FilterSelector`)
 - **Column 3** — documentation tables (`🔴 Documentation - MEASURES`, `TABLES`, `COLUMNS`, `RELATIONSHIPS`)
-- **Column 4** — the star schema itself, with dimension tables positioned above so filter propagation direction is visually clear top-to-bottom, and `FT_VOC` to their left as the fact table
+- **Column 4** — the star schema itself, with dimension tables positioned above so filter propagation direction is visually clear top-to-bottom, and `FT_CNP` to their left as the fact table
 
 No relationships overlap. Every connection is visible and traceable without scrolling or rearranging.
 
@@ -216,7 +218,7 @@ Measures are organized into display folders by function — keeping the field pa
 ### Data Model
 
 ```
-FT_VOC (fact)
+FT_CNP (fact)
 ├── dim_status          → [Status de la Candidatura]
 ├── dim_segment         → [Segment]
 ├── dim_country         → [País]
@@ -230,7 +232,7 @@ Supporting tables: `Parameter` (field parameter), `FilterSelector` (DATATABLE), 
 ```
 ⚙️ Measures
 └── 📁 % and totals
-    - Total VoC
+    - Total CNP
     - % Qualified / % In Production / % Live
     - % Cancelled / % Pick Later / % In Doubt / % Not Eligible
 
@@ -291,5 +293,5 @@ The visual language was deliberately aligned with Microsoft's Fluent Design Syst
 
 ---
 
-*Data: synthetically generated to simulate a Voice of Customer nominations pipeline. Built to practice DAX-generated SVG, UDF patterns, and semantic model documentation.*  
-*Author: Loana Ibañez — [datavizargentina.com.ar](https://datavizargentina.com.ar)*
+*Data: synthetically generated to simulate a Customer Nomination Program's pipeline. Built to practice DAX-generated SVG, UDF patterns, and semantic model documentation.*  
+*Author: Loana Ibañez*
