@@ -96,12 +96,6 @@ The data was generated synthetically to simulate a realistic distribution across
 
 ---
 
-## 👤 Who Is This For?
-
-
-
----
-
 ## 🔄 Process
 
 ### Step 1 — Define the audience
