@@ -29,6 +29,14 @@ She described the business problem in general terms. I generated a fictional dat
 
 ---
 
+## 🗂️ Project Overview
+
+A fictional Customer Nominations Pipeline for a Microsoft program. The dashboard allows the account manager, the program coordinator, and sales executives to monitor 100 nominations across 5 active pipeline stages, filter by status, and identify the top segments and solution areas.
+
+The data was generated synthetically to simulate a realistic distribution across segments, countries, and solution areas.
+
+---
+
 ## 🎨 Design Philosophy
 
 ### The Zeigarnik Effect
@@ -88,14 +96,6 @@ The bar chart switches between Segment and Solution Area via a field parameter. 
 
 ---
 
-## 🗂️ Project Overview
-
-A fictional Customer Nominations Pipeline for a Microsoft program. The dashboard allows the account manager, the program coordinator, and sales executives to monitor 100 nominations across 5 active pipeline stages, filter by status, and identify the top segments and solution areas.
-
-The data was generated synthetically to simulate a realistic distribution across segments, countries, and solution areas.
-
----
-
 ## 🔄 Process
 
 ### Step 1 — Define the audience
@@ -136,7 +136,7 @@ UI was finalized in Figma: the three-token color system per status was formalize
 The report was built in Power BI following the Top 10 PBI UI strategies, with special focus on usability, consistency, and engagement.
 
 ### Step 9 — Fine tune & test
-The report was tested in PBI Service to ensure performance, correct filter behavior, bookmark interactions, and SVG rendering across browsers. Semantic model documented with measure descriptions, display folders, and `INFO.VIEW` introspection tables.
+The report was tested in PBI Service to ensure performance, correct filter behavior, bookmark interactions, and SVG rendering across browsers. The semantic model was documented using the TMDL view in VS Code — measure descriptions, conditions, display folders, /// inline comments written directly in the model definition file, `INFO.VIEW` introspection tables, exponentially accelerating both development iteration and documentation compared to working exclusively in Power BI Desktop.
 
 ### Step 10 — Publish
 The report was published and is available as a live dashboard.
@@ -243,6 +243,18 @@ Supporting tables: `Parameter` (field parameter), `FilterSelector` (DATATABLE), 
     - Nominations Dynamic
     - OVW TextTotalNominations
 ```
+
+---
+
+## 🤖 Development & Documentation in the AI Era
+
+This project was developed using **Claude** as an AI pair — not to generate code blindly, but to accelerate the parts of the process that are time-intensive without being intellectually complex: writing measure descriptions, structuring TMDL comments, and iterating on SVG development.
+
+SVG generation in DAX sits at the intersection of data engineering and front-end development — it requires understanding of SVG geometry, coordinate systems, and UX/UI principles that go beyond standard Power BI skills. Claude served as a front-end collaborator for that layer: validating SVG syntax, calculating coordinates, and iterating on visual output before injecting the markup into DAX string concatenation.
+
+The TMDL view in VS Code was the other enabler. Working directly in the model definition file — rather than through the Power BI Desktop UI — made it possible to document every measure, column and table with descriptions and conditions in a fraction of the time it would have taken through the properties panel alone. Claude helped draft and refine that documentation layer systematically.
+
+The result is a semantic model that any developer can open and understand without a handoff meeting — which is exactly the point.
 
 ---
 
